@@ -1,0 +1,190 @@
+
+/* this is the animation for rounding corners */
+section img:hover{
+    border-radius: 50%;
+    -webkit-transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -moz-transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1)
+}
+
+section img{
+    -webkit-transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -moz-transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1)
+}
+
+
+/* styling begins here */
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #000000;
+    margin: 1rem;
+    font-size: 120%;
+}
+
+h1{
+    font-size: 300%;
+    font-weight: bold;
+    padding: 2%;
+}
+
+h2{
+    font-size: 200%;
+    font-weight: 600;
+    padding: 2%;
+}
+
+h3{
+    font-size: 130%;
+    font-weight: 600;
+    padding: 2%;
+}
+
+p{
+    padding: 2%;
+}
+
+.technique-block{
+    margin: 1.5rem 0;
+}
+
+/* list styling taken from https://codepen.io/chriscoyier/pen/NWqGLgj?editors=1100 */
+ol {
+    display: list-item;
+    list-style: none;
+    counter-reset: my-counter;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+}
+ol li {
+    counter-increment: my-counter;
+    padding: 0.5rem 0;
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-gap: 1rem;
+    margin: 0 2rem;
+}
+ol li:before {
+    content: counter(my-counter);
+    color: #FEFAE0;
+    font-weight: bold;
+    background-color: #F25B50;
+    border-radius: 50%;
+    padding: 0.2rem;
+    height: 24px;
+    width: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.ingredient-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.ingredient-list label{
+    margin-left: 0.5rem;
+    padding: 0.5% 0;
+}
+
+.ingredient-list input{
+    margin-left: 1rem;
+}
+
+.ingredients h2, .instructions h2{
+    text-decoration: underline #53915A;
+}
+
+.ingredients h3{
+    color: #53915A;
+}
+
+.ingredient-group{
+    margin: 1rem 0;
+}
+
+.ingredient-group span{
+    display: flex;
+}
+
+
+
+/* CSS button taken from https://getcssscan.com/css-buttons-examples button 74*/
+.button-74 {
+  background-color: #FEFAE0;
+  border: 2px solid #482728;
+  border-radius: 30px;
+  box-shadow: #482728 4px 4px 0 0;
+  color: #482728;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  padding: 0 1.5em;
+  margin-left: 16px;
+  line-height: 200%;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-74:hover {
+  background-color: #F25B50;
+  color: #FEFAE0;
+}
+
+.button-74:focus {
+    background-color: #482728;
+    color: #FEFAE0;
+}
+
+.button-74:active {
+  box-shadow: #482728 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+a:focus, span:focus{
+    all: unset;
+    border: 2px #53915A solid;
+    border-radius: 5px;
+}
+
+/* decrease padding between h2 ingredients and first h3  */
+.ingredient-list h3:first-of-type{
+    padding-top: 0;
+}
+
+.ingredients h2{
+    padding-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .button-74 {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+.instructions h2{
+    margin-top: 2rem;
+}
+
+.instructions h3{
+    color: #53915A;
+}
+
+.instructions li{
+    margin: 0 1rem;
+}
+
+.instructions li::before{
+    height: 28px;
+    width: 28px;
+}
+
+footer{
+    font-size: 75%;
+}
+/* end of css button  */
