@@ -78,6 +78,10 @@ ol li:before {
     justify-content: center;
 }
 
+input[type="checkbox"]{
+    accent-color: #53915A;
+}
+
 .ingredient-group{
     display: flex;
     flex-direction: column;
