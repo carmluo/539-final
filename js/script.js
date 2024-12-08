@@ -51,23 +51,3 @@ instructions.forEach(function(text){
         }
     })
 })
-
-// same as instructions but detects clicking on mobile as click is exclusively mouse click
-instructions.forEach(function(text){
-    text.value = 0;
-    text.addEventListener('touchend', function(){
-        let instruction = text.innerText;
-        if (text.value == 0){
-            text.value = 1;
-            console.log(`!was clicked !value is ${text.value}`)
-            text.style.textDecoration = "line-through #F25B50 2px";
-            // text.style.textDecorationColor = "#F25B50";
-            text.style.color = "#929989";
-        } else {
-            console.log(`unclicked`)
-            text.value = 0;
-            text.style.textDecoration = "none";
-            text.style.color = "#000000"
-        }
-    })
-})

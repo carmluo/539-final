@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=skillet" />
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
@@ -17,7 +18,30 @@
     </header>
 
     <main id="main">
-        <a href="#recipe-ingredients">Skip to recipe</a>
+        <a href="#recipe-ingredients" id="skipRecipeButton">
+            <svg
+                x="0px" y="0px" width="75" height="75"
+                viewBox="0 0 100 100"
+                xmlns="http://www.w3.org/2000/svg"
+                >
+                <path
+                    id="circlePath"
+                    d="
+                    M 10, 50
+                    a 40,40 0 1,1 80,0
+                    40,40 0 1,1 -80,0
+                    "
+                />
+                <text>
+                    <textPath id="skipRecipePath" href="#circlePath" startOffset="5%" aria-label="Skip to recipe">
+                    Skip to recipe
+                    </textPath>
+                </text>
+                </svg>
+            <span class="material-symbols-rounded" id="skipRecipeIcon">
+                    skillet
+                </span>
+            </a>
 
         <!-- this section contains the recipe description/in-depth explanation of technique or ingredients -->
         <section class="description">
@@ -201,39 +225,63 @@
             <h2>Instructions</h2>
             <h3>Day 1</h3>
             <ol>
-                <li class="instruction">Mix the flour, yeast and water together to make a poolish. Cover and leave the poolish for 12 hours.</li>
-                <li class="instruction">After 12 hours, it should be bubbly and 'ripe', aka ready to use. You can check it's well aerated by seeing if it floats in water.</li>
+                <li class="instruction">Mix the flour, yeast and water together to make a poolish. Cover and leave the
+                    poolish for 12 hours.</li>
+                <li class="instruction">After 12 hours, it should be bubbly and 'ripe', aka ready to use. You can check
+                    it's well aerated by seeing if it floats in water.</li>
             </ol>
 
             <h3>Day 2</h3>
             <ol>
-                <li class="instruction">Mix the poolish, flour, water, and yeast together until it forms a rough dough. It will look shaggy and ugly. Cover and leave to autolyse for 30 minutes.</li>
-                <li class="instruction">Dissolve the salt in the water and then mix this into the dough - squeeze it in with your hands until combined. Rest for 30 minutes, keeping it covered. Now add 1-2 tablespoons of olive oil, coat your hands and stretch and fold the dough - pick the dough up from the middle, stretching it, then folding it over itself gently. Repeat this four to five times until smooth. Cover and leave for 1 hour.</li>
-                <li class="instruction">Add 1-2 tablespoons of olive oil and stretch and fold the dough - it should be quite puffy at this stage.</li>
-                <li class="instruction">Cover and leave for 1 hour - it should be getting puffy and big each time you leave it.</li>
-                <li class="instruction">Check the gluten development. It should be stronger but may not be fully developed (eg. the dough tears). If needed, add more olive oil and stretch the dough.</li>
-                <li class="instruction">After 30 minutes, check the gluten development agiain - you should be able to make a thin stretchy windowpane. If it is well developed, you can move it into an oiled tub and put it into the fridge. Keep it covered so it doesn't dry out.</li>
+                <li class="instruction">Mix the poolish, flour, water, and yeast together until it forms a rough dough.
+                    It will look shaggy and ugly. Cover and leave to autolyse for 30 minutes.</li>
+                <li class="instruction">Dissolve the salt in the water and then mix this into the dough - squeeze it in
+                    with your hands until combined. Rest for 30 minutes, keeping it covered. Now add 1-2 tablespoons of
+                    olive oil, coat your hands and stretch and fold the dough - pick the dough up from the middle,
+                    stretching it, then folding it over itself gently. Repeat this four to five times until smooth.
+                    Cover and leave for 1 hour.</li>
+                <li class="instruction">Add 1-2 tablespoons of olive oil and stretch and fold the dough - it should be
+                    quite puffy at this stage.</li>
+                <li class="instruction">Cover and leave for 1 hour - it should be getting puffy and big each time you
+                    leave it.</li>
+                <li class="instruction">Check the gluten development. It should be stronger but may not be fully
+                    developed (eg. the dough tears). If needed, add more olive oil and stretch the dough.</li>
+                <li class="instruction">After 30 minutes, check the gluten development agiain - you should be able to
+                    make a thin stretchy windowpane. If it is well developed, you can move it into an oiled tub and put
+                    it into the fridge. Keep it covered so it doesn't dry out.</li>
                 <li class="instruction">After an hour, check and de-gas the dough by pressing it down.</li>
                 <li class="instruction">Cover and leave for at least 8 hours, ideally overnight.</li>
             </ol>
 
             <h3>Day 3</h3>
             <ol>
-                <li class="instruction">With oiled hands, move the dough onto an oiled baking tray, balling it in your hands slightly to help give it a smooth surface. Spread the dough out slightly, then cover with olive oil so it doesn't form a crust. Leave for 1 - 1.5 hours until it relaxes.</li>
-                <li class="instruction">Oil your hands, then dimple the top of the dough and redistribute the air bubbles. You can also lift up the edges and sides of the focaccia, which can help reveal hidden side bubbles! Leave for 30 minutes.</li>
+                <li class="instruction">With oiled hands, move the dough onto an oiled baking tray, balling it in your
+                    hands slightly to help give it a smooth surface. Spread the dough out slightly, then cover with
+                    olive oil so it doesn't form a crust. Leave for 1 - 1.5 hours until it relaxes.</li>
+                <li class="instruction">Oil your hands, then dimple the top of the dough and redistribute the air
+                    bubbles. You can also lift up the edges and sides of the focaccia, which can help reveal hidden side
+                    bubbles! Leave for 30 minutes.</li>
                 <li class="instruction">Preheat the oven to 250&deg;C/485&deg;F.</li>
-                <li class="instruction">Dimple the dough again with oiled hands and press toppings in (if using). Remember to poke them quite deep into the dough, especially ingredients prone to burning (like herbs). Top it off with a sprinkle of flaky salt.</li>
-                <li class="instruction">Bake for 10 minutes, then turn the oven down to 220&deg;C/425&deg;F and bake for a further 10-15 minutes until golden. Remove from tray and cool on a rack.</li>
-                <li class="instruction">Focaccia is best enjoyed the day it is made, but you can store it in the fridge for 3 days and reheat in the oven.</li>
+                <li class="instruction">Dimple the dough again with oiled hands and press toppings in (if using).
+                    Remember to poke them quite deep into the dough, especially ingredients prone to burning (like
+                    herbs). Top it off with a sprinkle of flaky salt.</li>
+                <li class="instruction">Bake for 10 minutes, then turn the oven down to 220&deg;C/425&deg;F and bake for
+                    a further 10-15 minutes until golden. Remove from tray and cool on a rack.</li>
+                <li class="instruction">Focaccia is best enjoyed the day it is made, but you can store it in the fridge
+                    for 3 days and reheat in the oven.</li>
             </ol>
         </section>
     </main>
 
     <footer>
-        <p>Original recipe available from Nicola Lamb, techniques from <a href="https://kitchenprojects.substack.com/p/kitchen-project-28-all-about-focaccia">Kitchen Projects</a> and instructions from <a href="https://www.amazon.com/Sift-Elements-Baking-Nicola-Lamb/dp/0593797124?tag=googhydr-20&source=dsa&hvcampaign=books&gclid=EAIaIQobChMI3NKGltOOigMVgV4PAh34nTRMEAAYASAAEgL8dvD_BwE">Sift: The Elements of Great Baking</a></p>
+        <p>Original recipe available from Nicola Lamb, techniques from <a
+                href="https://kitchenprojects.substack.com/p/kitchen-project-28-all-about-focaccia">Kitchen Projects</a>
+            and instructions from <a
+                href="https://www.amazon.com/Sift-Elements-Baking-Nicola-Lamb/dp/0593797124?tag=googhydr-20&source=dsa&hvcampaign=books&gclid=EAIaIQobChMI3NKGltOOigMVgV4PAh34nTRMEAAYASAAEgL8dvD_BwE">Sift:
+                The Elements of Great Baking</a></p>
     </footer>
 
-<script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
