@@ -51,3 +51,39 @@ instructions.forEach(function(text){
         }
     })
 })
+
+// set the focus of mobile skip to recipe button
+let recipeButton = document.querySelector('#skipRecipeButton')
+let buttonColor = document.querySelector('#skipRecipeIcon');
+let textColor = document.querySelector('#skipRecipePath')
+recipeButton.addEventListener('focus', function(){
+    console.log("set focus on recipe");
+    buttonColor.style.backgroundColor = '#FEFAE0';  
+    textColor.style.fill = '#482728';
+    // buttonColor.style.border = '#F25B50 3px solid';
+    buttonColor.style.color = '#482728';
+})
+
+recipeButton.addEventListener('blur', function(){
+    console.log("unfocus on recipe");
+    buttonColor.style.backgroundColor = '#482728';
+    textColor.style.fill = '#FEFAE0';
+    buttonColor.style.border = 'none';
+    buttonColor.style.color = '#FEFAE0';
+})
+
+let lastTechniqueBlock = document.querySelector('#gluten')
+let verticalNav = document.querySelector('.page-nav')
+window.onscroll = function(){
+    // when scrolled into last technique block (just before the vertical nav hits the ingredients), turn off opacity of nav 
+    if(lastTechniqueBlock.getBoundingClientRect().top <= 80){
+        console.log("TRIGGER: top of div reached.");
+        verticalNav.style.opacity = '0';
+    }
+
+    // if scrolled back up, reappears 
+    if(lastTechniqueBlock.getBoundingClientRect().top > 80){
+        verticalNav.style.opacity = '1';
+        console.log("TRIGGER: bottom of div reached.");
+    }
+}

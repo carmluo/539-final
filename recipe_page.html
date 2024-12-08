@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=skillet" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=skillet" />
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
@@ -18,30 +19,57 @@
     </header>
 
     <main id="main">
-        <a href="#recipe-ingredients" id="skipRecipeButton">
-            <svg
-                x="0px" y="0px" width="75" height="75"
-                viewBox="0 0 100 100"
-                xmlns="http://www.w3.org/2000/svg"
-                >
-                <path
-                    id="circlePath"
-                    d="
-                    M 10, 50
-                    a 40,40 0 1,1 80,0
-                    40,40 0 1,1 -80,0
-                    "
-                />
-                <text>
-                    <textPath id="skipRecipePath" href="#circlePath" startOffset="5%" aria-label="Skip to recipe">
-                    Skip to recipe
-                    </textPath>
-                </text>
+        <div class="page-nav">
+            <ul>
+                <li>
+                    <a href="#preferments">
+                        <img src="images/preferment.png" alt="doodle of sourdough jar">
+                        <p>Preferments</p></a>
+                </li>
+                <li>
+                    <a href="#yeast">
+                        <img src="images/yeast.png" alt="doodle of CO2 molecule">
+                        <p>Yeast</p></a>
+                </li>
+                <li>
+                    <a href="#developing-flavor">
+                        <img src="images/flavor.png" alt="doodle of fridge">
+                        <p>Developing flavor</p></a>
+                </li>
+                <li>
+                    <a href="#gluten">
+                        <img src="images/gluten.png" alt="doodle of wheat">
+                        <p>Gluten</p></a>
+                </li>
+                <li>
+                    <a href="#recipe-ingredients">
+                        <img src="images/ingredients.png" alt="doodle of a bag of flour">
+                        <p>Ingredients</p></a>
+                </li>
+                <li>
+                    <a href="#recipe-instructions">
+                        <img src="images/instructions.png" alt="doodle of a whisk">
+                        <p>Recipe</p></a>
+                </li>
+            </ul>
+            <a href="#recipe-ingredients" id="skipRecipeButton">
+                <svg x="0px" y="0px" width="75" height="75" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path id="circlePath" d="
+                            M 10, 50
+                            a 40,40 0 1,1 80,0
+                            40,40 0 1,1 -80,0
+                            " />
+                    <text>
+                        <textPath id="skipRecipePath" href="#circlePath" startOffset="5%" aria-label="Go to recipe">
+                            Go to recipe
+                        </textPath>
+                    </text>
                 </svg>
-            <span class="material-symbols-rounded" id="skipRecipeIcon">
+                <span class="material-symbols-rounded" id="skipRecipeIcon">
                     skillet
                 </span>
             </a>
+        </div>
 
         <!-- this section contains the recipe description/in-depth explanation of technique or ingredients -->
         <section class="description">
@@ -60,7 +88,7 @@
             </div>
 
             <!-- intro into preferments -->
-            <div class="technique-block">
+            <div class="technique-block" id="preferments">
                 <h3>Preferments</h3>
                 <p>Pre-ferments benefit your dough on multiple levels: Head start on fermentation and flavor.</p>
                 <p>Here, we use a poolish: A wet pre-ferment. It is made with 100% hydration (equal water and flour) and
@@ -75,7 +103,7 @@
             </div>
 
             <!-- intro into yeast -->
-            <div class="technique-block">
+            <div class="technique-block" id="yeast">
                 <h3>Yeast in bread</h3>
                 <p>When formulating a bread recipe, thinking about what it looks like will give you an idea of how much
                     yeast to use.</p>
@@ -121,7 +149,7 @@
             </div>
 
             <!-- this is the section about cold fermentation and developing flavor -->
-            <div>
+            <div class="technique-block" id="developing-flavor">
                 <h3>Developing flavor</h3>
                 <p>Cold fermentation, and the reason why this focaccia takes 3 days, is a great lesson in both patience
                     paying off and flavour. To understand this, we have to remember that yeast is a fungi and loves a
@@ -139,7 +167,7 @@
             </div>
 
             <!-- gluten section -->
-            <div>
+            <div class="technique-block" id="gluten">
                 <h3>Building strength</h3>
                 <p>I know we&apos;ve been through this before but let&apos;s quickly recap: Flour contains proteins -
                     Glutenin and Gliadin - that, in the presence of water, form gluten bonds. Gluten provides structure,

@@ -1,6 +1,6 @@
 
 /* this is the animation for rounding corners */
-section img:hover{
+/* section img:hover{
     border-radius: 50%;
     -webkit-transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
     -moz-transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -11,7 +11,7 @@ section img{
     -webkit-transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
     -moz-transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
     transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1)
-}
+} */
 
 
 /* styling begins here */
@@ -26,13 +26,17 @@ h1{
     font-size: 300%;
     font-weight: bold;
     padding: 2%;
+    background-color: #53915A;
+    color: #FEFAE0;
 }
 
 h2{
     font-size: 200%;
     font-weight: 600;
     padding: 2%;
+    /* text-decoration: underline #482728 5px; */
 }
+
 
 h3{
     font-size: 130%;
@@ -76,6 +80,7 @@ ol li:before {
     width: 24px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 input[type="checkbox"]{
@@ -196,19 +201,28 @@ footer{
 /* styling skip to recipe */
 .material-symbols-rounded {
     font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
-    position: absolute;
     bottom: 11%;
     left: 83%;
     z-index: 1;
     font-size: 24px;
 }
 
-/* skip to recipe a tag fixed positioning */
+#skipRecipeIcon{
+    background-color: #482728;
+    padding: 24px;
+    border-radius: 100%;
+    position: absolute;
+    color: #FEFAE0;
+    box-shadow: -5px 7px 28px -10px #482728;
+}
+
+/* skip to recipe <a> tag fixed positioning */
 #skipRecipeButton{
     position: fixed;
     right: 20%;
     bottom: 5%;
     width: 50px;
+    fill: #FEFAE0;
 }
 
 /* making the position of circle text relative to skip to recipe link <a> tag  */
@@ -225,13 +239,152 @@ footer{
     fill: #FEFAE0;
 }
 
-#skipRecipeIcon{
-    background-color: #482728;
-    padding: 24px;
-    border-radius: 100%;
-    position: absolute;
-    color: #FEFAE0;
-    box-shadow: -5px 7px 28px -10px #482728;
+#skipRecipeButton:focus{
+    border: unset;
 }
 
+/* skip to main styling  */
+#skip{
+    position: absolute;
+    top: -100px;
+}
 
+#skip:focus{
+    position: absolute;
+    top: 5px;
+    border: #F25B50 solid 3px;
+    background-color: #ffffff;
+}
+
+.page-nav ul{
+    display: none;
+}
+
+footer{
+    background-color: #283618;
+    color: #FEFAE0;
+}
+
+footer a{
+    color: #FEFAE0;
+}
+
+footer a:focus, footer a:hover{
+    background-color: #53915A;
+}
+
+@media screen and (min-width: 900px){
+
+    /* custom styling scrollbar  */
+    body::-webkit-scrollbar{
+        width: 0.35rem;
+    }
+
+    body::-webkit-scrollbar-track{
+        background: #929989;
+    }
+
+    body::-webkit-scrollbar-thumb{
+        background: #283618;
+    }
+
+    #skipRecipeButton{
+        display: none;
+    }
+
+    /* .description{
+        display: grid;
+        grid-template-columns: repeat(12, 50px);
+        column-gap: 16px;
+    } */
+
+    main{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: 16px;
+        margin: 16px;
+    }
+
+    header{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: 16px;
+        margin: 16px;
+        /* background-color: #53915A; */
+    }
+
+    h1{
+        grid-column: 5/-1;
+    }
+
+    .page-nav{
+        position: fixed;
+        top: 30%;
+        opacity: 1;
+        transition: all 150ms cubic-bezier(0.215, 0.61, 0.355, 1)
+        /* align-items: stretch; */
+    }
+
+    .page-nav img{
+        width: 2rem;
+        background-color: #F25B50;
+        border-radius: 50%;
+        padding: 2%;
+        margin: 2% 0;
+        transition: all 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    .page-nav ul li:hover img, .page-nav ul a:focus img{
+        width: 4rem;
+        border-radius: 10%;
+    }
+
+    .page-nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .page-nav li a{
+        display: flex;
+        align-items: center;
+        text-wrap: nowrap;
+        text-decoration: none;
+        color: #000000;
+        margin: 0.5rem 0;
+        gap: 5%;
+    }
+
+    .page-nav p{
+        display: none;
+        color:#F25B50;
+        font-weight: 600;
+    }
+
+    .page-nav ul li:hover p, .page-nav ul a:focus p{
+        display: contents;
+    }
+
+    .page-nav ul a:focus{
+        padding-right: 8vh;
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+        border: none;
+    }
+
+    section.description, section.instructions{
+        grid-column: 5/-1;
+    }
+
+    section.ingredients{
+        grid-column: 1/4;
+    }
+
+    .instructions h2{
+        margin-top: 0;
+    }
+
+    .ingredients{
+        padding: 15px;
+    }
+
+}
