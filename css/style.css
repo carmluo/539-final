@@ -294,6 +294,10 @@ footer a:focus, footer a:hover{
     background-color: #53915A;
 }
 
+.tip{
+    display: none;
+}
+
 @media screen and (min-width: 900px){
 
     #skipRecipeButton{
@@ -422,7 +426,7 @@ footer a:focus, footer a:hover{
         opacity: 1;
         display: inline-block;
         position: absolute;
-        transition: all 100ms cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition: all 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
         color: #FEFAE0;
             /* triangle dimension */
         --b: 2em; /* base */
