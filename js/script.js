@@ -33,10 +33,12 @@ resetBtn.addEventListener("click", function(event){
 
 // if instruction is clicked, add cross through
 let instructions = document.querySelectorAll(".instruction")
+let tip = document.querySelector(".tip")
 instructions.forEach(function(text){
     text.value = 0;
     text.addEventListener('click', function(){
         let instruction = text.innerText;
+        tip.style.opacity = 0;
         if (text.value == 0){
             text.value = 1;
             console.log(`!was clicked !value is ${text.value}`)
@@ -76,14 +78,19 @@ let lastTechniqueBlock = document.querySelector('#gluten')
 let verticalNav = document.querySelector('.page-nav')
 window.onscroll = function(){
     // when scrolled into last technique block (just before the vertical nav hits the ingredients), turn off opacity of nav 
-    if(lastTechniqueBlock.getBoundingClientRect().top <= 80){
-        console.log("TRIGGER: top of div reached.");
+    if(lastTechniqueBlock.getBoundingClientRect().top <= 400){
+        // console.log("TRIGGER: top of div reached.");
         verticalNav.style.opacity = '0';
     }
 
-    // if scrolled back up, reappears 
-    if(lastTechniqueBlock.getBoundingClientRect().top > 80){
+    // if scrolled back up, reappears
+    if(lastTechniqueBlock.getBoundingClientRect().top > -400){
         verticalNav.style.opacity = '1';
-        console.log("TRIGGER: bottom of div reached.");
+        // console.log("TRIGGER: bottom of div reached.");
     }
+}
+
+// when the page is loaded, do function
+window.onload = function() {
+    console.log(`this is your first entrance`)
 }

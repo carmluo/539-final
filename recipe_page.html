@@ -8,6 +8,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=skillet" />
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="lightbox/dist/css/lightbox.css" rel="stylesheet"/>
 
     <title>Focaccia Recipe</title>
 </head>
@@ -77,6 +78,16 @@
             <div class="technique-block">
                 <h2>What's a focaccia? And other technical considerations.</h2>
                 <p>Massive, bubbly, crispy yet airy bread.</p>
+                <a class="lightbox-photo" href="images/focaccia.JPG" data-lightbox="focaccia" data-title="Focaccia">
+                    <script>
+                        lightbox.option({
+                          'resizeDuration': 100,
+                          'imageFadeDuration': 50,
+                          'fadeDuration':100,
+                        })
+                    </script>
+                    <img src="images/focaccia.JPG" alt="Cross section of focaccia bread">
+                    </a>
                 <p>Focaccias come in all shapes and sizes - you have the fine textured, cakey kind or the mad bubbly
                     kind, which is more popular here in London. But no matter which you prefer, the most important thing
                     about a focaccia is that it is rich with olive oil. And really good olive oil if you can.
@@ -169,6 +180,16 @@
             <!-- gluten section -->
             <div class="technique-block" id="gluten">
                 <h3>Building strength</h3>
+                <a class="lightbox-photo" href="images/gluten.jpg" data-lightbox="focaccia" data-title="Developing gluten">
+                    <script>
+                        lightbox.option({
+                          'resizeDuration': 100,
+                          'imageFadeDuration': 50,
+                          'fadeDuration':100,
+                        })
+                    </script>
+                    <img src="images/gluten.jpg" alt="Stretching high hydration dough to show strong gluten development">
+                    </a>
                 <p>I know we&apos;ve been through this before but let&apos;s quickly recap: Flour contains proteins -
                     Glutenin and Gliadin - that, in the presence of water, form gluten bonds. Gluten provides structure,
                     shape and stretch to your dough. The presence of gluten allows a dough to be both elastic (holds its
@@ -251,6 +272,10 @@
         <!-- this section contains the actual recipe instructions -->
         <section class="instructions" id="recipe-instructions">
             <h2>Instructions</h2>
+                <!-- this is the initial tip to click on instructions to cross it out -->
+            <div class="positioning">
+                <p class="tip bottom">Tip 💡 Click on each instruction step to cross it off your list</p>
+            </div>
             <h3>Day 1</h3>
             <ol>
                 <li class="instruction">Mix the flour, yeast and water together to make a poolish. Cover and leave the
@@ -310,6 +335,7 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="lightbox/dist/js/lightbox-plus-jquery.js"></script>
 </body>
 
 </html>

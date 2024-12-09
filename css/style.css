@@ -52,6 +52,26 @@ p{
     margin: 1.5rem 0;
 }
 
+/* styling images  */
+img{
+    padding: 0 2%;
+    width: 100%;
+}
+
+/* custom styling scrollbar  */
+body::-webkit-scrollbar{
+    width: 0.35rem;
+}
+
+body::-webkit-scrollbar-track{
+    background: #929989;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: #283618;
+}
+
+
 /* list styling taken from https://codepen.io/chriscoyier/pen/NWqGLgj?editors=1100 */
 ol {
     display: list-item;
@@ -170,6 +190,7 @@ a:focus, span:focus{
 }
 
 @media (min-width: 768px) {
+
   .button-74 {
     min-width: 120px;
     padding: 0 25px;
@@ -275,23 +296,9 @@ footer a:focus, footer a:hover{
 
 @media screen and (min-width: 900px){
 
-    /* custom styling scrollbar  */
-    body::-webkit-scrollbar{
-        width: 0.35rem;
-    }
-
-    body::-webkit-scrollbar-track{
-        background: #929989;
-    }
-
-    body::-webkit-scrollbar-thumb{
-        background: #283618;
-    }
-
     #skipRecipeButton{
         display: none;
     }
-
     /* .description{
         display: grid;
         grid-template-columns: repeat(12, 50px);
@@ -310,7 +317,7 @@ footer a:focus, footer a:hover{
         grid-template-columns: repeat(12, 1fr);
         column-gap: 16px;
         margin: 16px;
-        /* background-color: #53915A; */
+        background-color: #B2C6B4;
     }
 
     h1{
@@ -386,5 +393,51 @@ footer a:focus, footer a:hover{
     .ingredients{
         padding: 15px;
     }
+
+    /* styling images for desktop  */
+    img{
+        width: 50%;
+    }
+
+    .lightbox-photo:focus{
+        border: unset;
+    }
+
+    /* styling the recipe tip  */
+    .tip-wrap{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .positioning{
+        position: relative;
+        width: 50%;
+        height: 0;
+        left: 50%;
+        bottom: 2%;
+    }
+
+    .tip{
+        opacity: 1;
+        display: inline-block;
+        position: absolute;
+        transition: all 100ms cubic-bezier(0.215, 0.61, 0.355, 1);
+        color: #FEFAE0;
+            /* triangle dimension */
+        --b: 2em; /* base */
+        --h: 1em; /* height*/
+
+        border-image: fill 0//var(--h)
+        conic-gradient(var(--c,#283618) 0 0);
+    }
+
+    .bottom {
+        clip-path:
+          polygon(0 100%,0 0,100% 0,100% 100%,
+            calc(50% + var(--b)/2) 100%,
+            50% calc(100% + var(--h)),
+            calc(50% - var(--b)/2) 100%);
+      }
 
 }
