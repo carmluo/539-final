@@ -216,6 +216,7 @@ a:focus, span:focus{
 
 footer{
     font-size: 75%;
+    margin-top: 2rem;
 }
 /* end of css button  */
 
@@ -403,9 +404,15 @@ footer a:focus, footer a:hover{
         width: 50%;
     }
 
-    .lightbox-photo:focus{
+    a.lightbox-photo:focus{
         border: unset;
     }
+
+    .lightbox-photo:focus img{
+        border: #53915A 4px solid;
+        border-radius: 8px;
+    }
+
 
     /* styling the recipe tip  */
     .tip-wrap{
@@ -444,4 +451,4 @@ footer a:focus, footer a:hover{
             calc(50% - var(--b)/2) 100%);
       }
 
-}
+}  

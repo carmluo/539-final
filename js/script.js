@@ -38,6 +38,7 @@ instructions.forEach(function(text){
     text.value = 0;
     text.addEventListener('click', function(){
         let instruction = text.innerText;
+        // first instance of clicking on instructions gets rid of tooltips 
         tip.style.opacity = 0;
         if (text.value == 0){
             text.value = 1;
@@ -88,9 +89,4 @@ window.onscroll = function(){
         verticalNav.style.opacity = '1';
         // console.log("TRIGGER: bottom of div reached.");
     }
-}
-
-// when the page is loaded, do function
-window.onload = function() {
-    console.log(`this is your first entrance`)
 }
